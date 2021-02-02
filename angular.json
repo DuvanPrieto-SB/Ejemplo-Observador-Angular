@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "patronObserver"
+    }
+  },
+  "defaultProject": "patronObserver",
+  "cli": {
+    "analytics": false
+  }
 }

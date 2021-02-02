@@ -1,0 +1,28 @@
+<h2>
+  Listado clientes
+</h2>
+<div *ngIf="! clientes.length">No hay clientes por el momento</div>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <td>Nombre</td>
+        <td>CIF</td>
+        <td>Dirección</td>
+        <td>Grupo</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of clientes">
+        <td>{{cliente.nombre}}</td>
+        <td>{{cliente.cif}}</td>
+        <td>{{cliente.direccion}}</td>
+        <td>{{cliente.grupo}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+  {{ clientes$ | async | json }}
+</p>
